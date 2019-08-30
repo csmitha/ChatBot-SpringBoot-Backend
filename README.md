@@ -1,3 +1,7 @@
+Details with screen shots avaialable in below link.
+https://java99beginnertoprofessional.blogspot.com/2019/08/chat-bot-sprigboot-websocketsangular-8.html
+
+
 What we are building? 
 
 Basically, we will create two projects frontend and backend to build chat application POC. 
@@ -10,7 +14,7 @@ Tech Stack.
 
 2)    Spring Boot Rest. 
 
-3)    JPA – Embedded H2 DB. 
+3)    JPA â€“ Embedded H2 DB. 
 
 4) Swagger 
 
@@ -44,7 +48,7 @@ mvn clean install
 
 mvn spring-boot:run  
 
-Application will run on “9000” port. 
+Application will run on â€œ9000â€ port. 
 
 http://localhost:9000 
 
@@ -68,7 +72,7 @@ npm install.
 
 npm start. 
 
-Application will start on “4200” port. 
+Application will start on â€œ4200â€ port. 
 
 http://localhost:4200  
 
@@ -96,13 +100,13 @@ Executing Application
 
  
 
-3) Enter username - “TTom”  and  password “123456” on the Login screen to navigate to chat screen.  
+3) Enter username - â€œTTomâ€  and  password â€œ123456â€ on the Login screen to navigate to chat screen.  
 
  
 
  
 
-4) Enter username - “JRobert”  and  password “123456” on the Login screen to navigate to chat screen for second user. Let's roll! 
+4) Enter username - â€œJRobertâ€  and  password â€œ123456â€ on the Login screen to navigate to chat screen for second user. Let's roll! 
 
 5) Message exchange between different users. 
 
