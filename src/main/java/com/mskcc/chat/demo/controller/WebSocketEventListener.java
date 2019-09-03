@@ -12,6 +12,17 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
 import com.mskcc.chat.demo.model.ChatMessage;
 
+
+/**
+* The WebSocketEventListener program support initial subscribe
+* and client to disconnect
+*
+* @author  Smitha Chap
+* @version 1.0
+* @since   2019-09-02
+*/
+
+
 @Component
 public class WebSocketEventListener {
 

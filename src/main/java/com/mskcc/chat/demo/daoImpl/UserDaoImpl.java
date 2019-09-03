@@ -1,7 +1,5 @@
 package com.mskcc.chat.demo.daoImpl;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +8,16 @@ import com.mskcc.chat.demo.model.User;
 import com.mskcc.chat.demo.repository.UserRepository;
 
 
+
+/**
+* The UserDaoImpl program implements 
+* User  findByusername and saveUser methods
+*
+* @author  Smitha Chap
+* @version 1.0
+* @since   2019-09-02
+*
+**/
 @Service
 public  class UserDaoImpl implements UserDao {
 	

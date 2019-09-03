@@ -1,5 +1,7 @@
 package com.mskcc.chat.demo.controller;
 
+import java.util.ArrayList;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +23,18 @@ import com.mskcc.chat.demo.model.User;
 
 import io.swagger.annotations.Api;
 
+/**
+ * The ChatDemoController program implements an RestController that exposes
+ * WebSocket support and rest calls for frontend client to consume
+ *
+ * @author Smitha Chap
+ * @version 1.0
+ * @since 2019-09-02
+ */
+
 @RestController
 @Api(value = "CHAT Management System")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ChatDemoController {
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ChatDemoController.class);
@@ -36,7 +48,7 @@ public class ChatDemoController {
 	@MessageMapping("/join")
 	@SendTo("/topic/chatting")
 	public ChatMessage join(ChatMessage message) throws Exception {
-		Thread.sleep(1000); 
+		Thread.sleep(1000);
 		return message;
 	}
 
@@ -44,7 +56,7 @@ public class ChatDemoController {
 	@MessageMapping("/chat")
 	@SendTo("/topic/chatting")
 	public ChatMessage chat(ChatMessage message) throws Exception {
-		Thread.sleep(1000); 
+		Thread.sleep(1000);
 		try {
 			message.setTime(getDateTimeNow());
 			chatDao.save(message);
@@ -79,6 +91,19 @@ public class ChatDemoController {
 		return user;
 	}
 
+	@RequestMapping(value = "/chatHistory/{userid}", method = RequestMethod.GET)
+	public ArrayList<ChatMessage> getChatHistory(@PathVariable String userid) throws Exception {
+
+		ArrayList<ChatMessage> chatMessage = null;
+		try {
+			logger.info("Chat History for User::" + userid);
+			chatMessage = chatDao.findByUserName(userid);
+		} catch (Exception ex) {
+			throw new Exception("backend serverError");
+		}
+		return chatMessage;
+	}
+
 	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
 	public ResponseEntity<User> registerUser(@RequestBody User user) {
@@ -87,7 +112,6 @@ public class ChatDemoController {
 		userDao.saveUser(user);
 		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
-
 
 	private java.sql.Timestamp getDateTimeNow() {
 		java.util.Date utilDate = new java.util.Date();

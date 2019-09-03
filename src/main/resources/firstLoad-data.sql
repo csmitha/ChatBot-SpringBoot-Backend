@@ -1,9 +1,9 @@
 INSERT INTO Users (USERNAME, FIRST_NAME, LAST_NAME, EMAIL,PASSWORD) 
-	VALUES('Tom', 'Tumbler' ,  'TTom' , 'Tom.Tumbler@gmail.com','123456');
+	VALUES( 'TTom' ,'Tom', 'Tumbler' ,'Tom.Tumbler@gmail.com','123456');
 INSERT INTO Users (USERNAME, FIRST_NAME, LAST_NAME, EMAIL,PASSWORD) 
-	VALUES('Hary', 'Sobers' , 'HSober' , 'Hari.sobers@yahoo.com','123456');
+	VALUES( 'HSober' ,'Hary', 'Sobers' , 'Hari.sobers@yahoo.com','123456');
 INSERT INTO Users (USERNAME, FIRST_NAME, LAST_NAME, EMAIL,PASSWORD) 
-	VALUES('Lory', 'Hamler' , 'LHamler' , 'Lory.Hamler@gmail.com','123456');
+	VALUES( 'LHamler','Lory', 'Hamler' , , 'Lory.Hamler@gmail.com','123456');
 INSERT INTO Users (USERNAME, FIRST_NAME, LAST_NAME, EMAIL,PASSWORD) 
-	VALUES('Juli', 'Roberts' , 'JRobert' , 'Juli.Roberts@aol.com','123456');
+	VALUES( 'JRobert' , 'Juli', 'Roberts' ,'Juli.Roberts@aol.com','123456');
 	

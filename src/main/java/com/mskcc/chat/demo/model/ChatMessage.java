@@ -11,6 +11,19 @@ import javax.persistence.Transient;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+
+/**
+* The ChatMessage program model  
+* ties to H2 DB Table "CHATHISTORY"
+* and column mappings.
+*
+* @author  Smitha Chap
+* @version 1.0
+* @since   2019-09-02
+*
+**/
+
+
 @EntityScan
 @Entity
 @Table(name = "CHATHISTORY")
